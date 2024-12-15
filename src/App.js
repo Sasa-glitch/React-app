@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Employees from './pages/Employees';
 import Navbar from './components/Navbar';
@@ -5,9 +6,12 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <Navbar>
-      <Employees />
-    </Navbar>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path='/Employees' element={<Employees />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
