@@ -65,7 +65,7 @@ function Employees() {
   })
 
   return (
-    <div className="App bg-gray-400 min-h-screen">
+    <div className="max-w-7xl mx-auto">
       <div className='flex flex-wrap justify-center'>
         {Data}
       </div>
