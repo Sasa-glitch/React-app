@@ -3,10 +3,12 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { NavLink } from 'react-router-dom'
 
 const navigation = [
-  { name: 'Dashboard', href: '/Employees', current: true },
-  { name: 'Team', href: '/Team', current: false },
-  { name: 'Projects', href: '/Projects', current: false },
-  { name: 'Calendar', href: '/Calend', current: false },
+  { name: 'Employees', href: '/Employees' },
+  { name: 'Team', href: '/Team' },
+  { name: 'Projects', href: '/Projects' },
+  { name: 'Calendar', href: '/Calendar' },
+  { name: 'Dictionary', href: '/Dictionary' },
+  { name: 'Definition', href: '/Definition' },
 ]
 
 function classNames(...classes) {
@@ -43,10 +45,6 @@ export default function Navbar(props) {
                       key={item.name}
                       to={item.href}
                       aria-current={({ isActive }) => isActive ? 'page' : undefined}
-                      // className={classNames(
-                      //   item.current ? 'no-underline bg-gray-900 text-white' : 'no-underline text-gray-300 hover:bg-gray-700 hover:text-white',
-                      //   'rounded-md px-3 py-2 text-sm font-medium',
-                      // )}
                       className={({ isActive }) => {
                         return classNames(
                           isActive ? 'no-underline bg-gray-900 text-white' : 'no-underline text-gray-300 hover:bg-gray-700 hover:text-white',
